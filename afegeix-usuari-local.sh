@@ -18,7 +18,7 @@ then
 
   #6-Check user
   if id -u "$username"> /dev/null 2>&1 
-    then echo'El usuario se ha creado correctamente'
+    then echo 'El usuario se ha creado correctamente'
   else
     echo 'El usuario no se ha creado correctamente'
   fi
