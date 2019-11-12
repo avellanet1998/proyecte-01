@@ -24,8 +24,15 @@ then
   fi
 
   #7-Set the password
-  `passwd $username`
- 
+  echo `$password | passwd $username`
+
+  #9-Force passwd change first login
+  `passwd -e ${username}`
+
+  #10-Display username,password and the host where the user was created
+  user_name=$(id -un)
+  echo "Tu usuario es, $username, con contrasenya $password creado por $user_name"
+
 else
   echo 'No tienes permisos.'
 fi
