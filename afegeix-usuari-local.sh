@@ -1,4 +1,5 @@
-#!bin/var
+#!/bin/bash
+#https://github.com/a18joszamper/proyecte-01
 
 # 1-Make sure the script is being executed with superuser privileges.
 if [[ "${UID}" -eq 0 ]]
@@ -25,6 +26,8 @@ then
 
   #7-Set the password
   echo `$password | passwd $username`
+  
+  #8-passwd already check creation password.
 
   #9-Force passwd change first login
   `passwd -e ${username}`
