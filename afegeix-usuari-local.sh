@@ -16,7 +16,16 @@ then
   # 5-Create the user.
   useradd -c "${fullname}" -m ${username}
 
+  #6-Check user
+  if id -u "$username"> /dev/null 2>&1 
+    then echo'El usuario se ha creado correctamente'
+  else
+    echo 'El usuario no se ha creado correctamente'
+  fi
 
+  #7-Set the password
+  `passwd $username`
+ 
 else
   echo 'No tienes permisos.'
 fi
