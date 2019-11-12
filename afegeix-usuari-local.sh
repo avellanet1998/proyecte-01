@@ -30,7 +30,7 @@ then
   #8-passwd already check creation password.
 
   #9-Force passwd change first login
-  `passwd -e ${username}`
+  passwd -e ${username}
 
   #10-Display username,password and the host where the user was created
   user_name=$(id -un)
